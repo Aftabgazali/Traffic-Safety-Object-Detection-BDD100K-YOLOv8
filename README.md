@@ -9,6 +9,12 @@ End-to-end object detection pipeline for traffic safety on a BDD100K (HF) subset
 
 ---
 
+## Inference demo: YOLOv8s @1024 running in real-time on RTX 3050
+▶️ **Click the GIF to play** · or open directly: [demo_25s.mp4](artifacts/demo_out/demo_25s.mp4)
+
+[![Inference demo](artifacts/demo_out/demo_25s.gif)](artifacts/demo_out/demo_25s.mp4)
+
+
 ## Results (holdout test)
 
 ### Baseline: YOLOv8n @ 640 (30 epochs)
