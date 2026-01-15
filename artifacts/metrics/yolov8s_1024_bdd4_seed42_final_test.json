@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-01-13T14:55:48",
+  "data_yaml": "C:\\Users\\Gazal\\Documents\\Self_Studies\\Vision\\Traffic Safety Vehicle + Pedestrian + Sign Detection\\traffic-safety-bdd100k\\exports\\yolo_bdd4\\dataset.yaml",
+  "weights": "C:\\Users\\Gazal\\Documents\\Self_Studies\\Vision\\Traffic Safety Vehicle + Pedestrian + Sign Detection\\traffic-safety-bdd100k\\runs\\yolov8s_1024_bdd4_seed42_final\\weights\\best.pt",
+  "results_dict": {
+    "metrics/precision(B)": 0.697,
+    "metrics/recall(B)": 0.574,
+    "metrics/mAP50(B)": 0.625,
+    "metrics/mAP50-95(B)": 0.328,
+    "fitness": 0.4
+  }
+}

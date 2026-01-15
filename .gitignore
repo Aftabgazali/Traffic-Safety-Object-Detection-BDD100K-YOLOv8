@@ -1,0 +1,27 @@
+bdd100k_10k/*
+project_docs/*
+
+# data + exports
+bdd100k_10k/
+exports/
+runs/
+
+# python junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# caches
+*.cache
+.cache/
+
+# local configs
+src/config.yaml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# model weights
+*.pt
+

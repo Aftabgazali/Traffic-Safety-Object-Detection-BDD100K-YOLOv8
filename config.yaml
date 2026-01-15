@@ -1,0 +1,50 @@
+project:
+  name: traffic-safety-bdd100k
+  dataset_name: bdd100k_hf_10k_local
+
+paths:
+  exports_dir: exports/yolo_bdd4
+  artifacts_dir: artifacts
+  splits_file: artifacts/splits/split_seed42.json
+  class_map_file: artifacts/class_map/bdd_to_4class.json
+  runs_dir: runs
+
+labels:
+  source_field: detections
+  filtered_field: detections4
+  classes: ["car", "person", "rider", "traffic light"]
+  keep: ["car", "rider", "traffic light"]
+  person_merge_from: ["pedestrian", "other person"]
+
+split:
+  seed: 42
+  ratios: { train: 0.8, val: 0.1, test: 0.1 }
+  stratify_field: timeofday
+
+export:
+  dataset_type: yolov5   # fiftyone exporter type, works with Ultralytics
+
+train_yolov8n:
+  model: yolov8n.pt
+  epochs: 30
+  imgsz: 640
+  batch: 8
+  device: 0          # 0 = first GPU, "cpu" if needed
+  workers: 2         # Windows + laptop: keep modest
+  seed: 42
+  patience: 20
+  run_name: yolov8n_bdd4_seed42
+
+train_yolov8s:
+  model: yolov8s.pt
+  epochs: 50
+  imgsz: 1024
+  batch: 1
+  device: 0
+  workers: 2
+  seed: 42
+  patience: 20
+  run_name: yolov8s_1024_bdd4_seed42_final
+
+eval:
+  split: test
